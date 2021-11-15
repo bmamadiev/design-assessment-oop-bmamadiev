@@ -54,14 +54,12 @@ public class Main {
 
     public static void main (String[] args) {
         //your code here
-        StickyNote messageOne = (new StickyNote("Buy groceries", Priority.LOW));
-        StickyNote messageTwo = (new StickyNote("Pay bills", Priority.MEDIUM));
-        StickyNote messageThree = (new StickyNote("Do homework", Priority.HIGH));
-        noteArrayList.add(messageOne);
-        noteArrayList.add(messageTwo);
-        noteArrayList.add(messageThree);
 
-        peelNote(noteArrayList, 0);
+        noteArrayList = addNote(MESSAGE_1, Priority.LOW, noteArrayList);
+        noteArrayList = addNote(MESSAGE_2, Priority.MEDIUM, noteArrayList);
+        noteArrayList = addNote(MESSAGE_3, Priority.HIGH, noteArrayList);
+
+        noteArrayList = peelNote(noteArrayList, 0);
 
         System.out.println("-----Display all Sticky Notes-----");
         System.out.println(noteArrayList.toString());
